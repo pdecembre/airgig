@@ -13,17 +13,23 @@
   <div id="login" class="form-action show">
     <h1>Login</h1>
     <p>If you don't have an account, please click on the register tab to create one.</p>
-    <form id="frmLogin" name="frmLogin">
+    <form id="frmLogin" name="frmLogin" (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <ul>
         <li>
-          <input type="text" placeholder="Username" />
+          <input type="email" placeholder="email" id="email" name="email" required [(ngModel)]="loginModel.email" #email="ngModel"/>
+          <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+            A valid email address is required
+          </div>
         </li>
         <li>
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" id="password" name="password" required [(ngModel)]="loginModel.password" #pwd="ngModel"/>
+          <div [hidden]="pwd.valid || pwd.pristine" class="alert alert-danger">
+           Please enter your account's password
+          </div>
         </li>
-        <li>
-          <input type="submit" value="Login" class="button" />
-        </li>
+        <div>
+          <input type="button" value="Login" class="button" (click)="onsubmit()" />
+        </div>
       </ul>
     </form>
   </div>

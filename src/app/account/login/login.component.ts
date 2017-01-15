@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth/auth.service';
-
 import { Router, ActivatedRoute, Params } from '@angular/router';
+
+import { AuthService } from '../../services/auth/auth.service';
+import { Login, Register } from '../../services/models/account';
 
 @Component({
    moduleId: module.id,
@@ -14,7 +15,19 @@ export class LoginComponent implements OnInit {
   constructor(private authSvc: AuthService, private router: Router) {
   }
 
-  login(){
+  loginModel: Login = new Login('','');
+
+  isLoggedIn = false;
+
+  onsubmit(){
+    this.isLoggedIn = (this.loginModel.email !== '' && this.loginModel.password !=='');
+    console.log(this.isLoggedIn);
+    console.log(this.loginModel);
+  }
+
+
+
+  register(){
 
   }
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2';
+import { Login, Register } from '../models/account';
 
 @Injectable()
 export class AuthService {
@@ -16,11 +17,10 @@ export class AuthService {
 
   firebaseAuth:any
 
-  credentials:any
+  credentials:Login
   
-
-  login(email:string, pwd:string){    
-    var credentials:any = { email: email, password: pwd };
+  login(login:Login){    
+    var credentials:any = { email: login.email, password: login.password };
     this.af.auth.login(credentials);
     this.credentials = credentials;
   }
