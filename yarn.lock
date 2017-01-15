@@ -1803,7 +1803,7 @@ findup@0.1.5, findup@^0.1.5:
     colors "~0.6.0-1"
     commander "~2.1.0"
 
-firebase@^3.0.0:
+firebase@^3.0.0, firebase@^3.6.5:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.6.5.tgz#e321da57c9c5b66e436432a3e15f1cf6d3b2f9a9"
   dependencies:
@@ -2639,6 +2639,10 @@ joi@^6.10.1:
     isemail "1.x.x"
     moment "2.x.x"
     topo "1.x.x"
+
+jquery@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
 js-base64@^2.1.9:
   version "2.1.9"
@@ -5784,6 +5788,10 @@ yargs@~3.10.0:
 yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+zone.js@0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.7.4.tgz#0e624fe5b724450ee433495deff15c02b3908ee0"
 
 zone.js@^0.7.2:
   version "0.7.5"
