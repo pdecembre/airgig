@@ -21,18 +21,14 @@ export class AuthService {
   credentials:Login
   
   login(login:Login) : firebase.Promise<FirebaseAuthState>{   
-        
 
     this.credentials = login;
-
     return this.af.auth.login(login);
-
 
     // this.af.auth.login(login)
     //             .then(
-      //           lg => {this.firebaseAuth = lg.auth; },
-    //             err => {
-    //               console.log('AuthService.login error: ' + err.message + '\n' + err.stack );
+    //             lg => {this.firebaseAuth = lg.auth; },
+    //             er => { console.log('AuthService.login error: ' + er.message + '\n' + er.stack );
     //             });
 
   }
